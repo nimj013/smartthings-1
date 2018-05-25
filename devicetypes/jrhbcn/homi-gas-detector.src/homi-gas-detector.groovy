@@ -46,8 +46,8 @@ metadata {
         standardTile("refresh", "device.refresh", inactiveLabel: false, decoration: "flat", width: 1, height: 1) {
 			state "default", action:"refresh.refresh", icon:"st.secondary.refresh"
 		}        
-		main (["smoke"])
-		details(["smoke","refresh","configure"])
+		main (["gas"])
+		details(["gas","refresh","configure"])
 	}
 }
  
@@ -149,7 +149,7 @@ private Map getSmokeResult(value) {
 	def linkText = getLinkText(device)
 	def descriptionText = "${linkText} is ${value == 'detected' ? 'detected' : 'clear'}"
 	return [
-		name: 'smoke',
+		name: 'gas',
 		value: value,
 		descriptionText: descriptionText
 	]
